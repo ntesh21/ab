@@ -1,0 +1,308 @@
+<HTML>
+{% load static %}
+<HEAD>
+	<title>AB</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- /Owl Stylesheets -->
+    <!-- gallery css -->
+    <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <!-- bootstrap css -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <!-- custom css -->
+
+    <!-- animate css -->
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+    <link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=cyrillic,latin-ext,vietnamese"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+
+
+<style>
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 80px;
+    border: 3px solid #FBA442;
+    border-top: none;
+    z-index: 9;
+}
+/* Add styles to the form container */
+.form-container2 {
+    width: 300px;
+    padding: 0px 10px 10px 10px;
+    background-color: white;
+    border: 1px solid #FBA442;
+    margin-bottom: 5px;
+   
+    }
+#chatbox{
+     max-height: 270px;
+     height: 270px;
+    overflow-y: scroll;
+}
+/* Full-width textarea */
+.form-container2 textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    background: rgba(0, 123, 255, 0.25);
+    resize: none;
+    min-height: 200px;
+}
+/* When the textarea gets focus, do something */
+.form-container2 textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+/* Set a style for the submit/send button */
+.form-container2 .btn {
+    background-color: #FBA442;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+#chat-message-input { 
+    border: 1px solid #FBA442;
+    background-color: #eaeaea;
+    color: #151515;
+}
+#chat-message-input:focus{
+    background-color: #fff;
+    border-color: #FBA442;
+    outline: none;
+}
+#chat-message-submit{
+    color: #FBA442;
+    padding: 8px;
+}
+/* Add a red background color to the cancel button */
+.form-container2 .cancel {
+    background-color: red;
+}
+/* Add some hover effects to buttons */
+.form-container2 .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+.incoming_msg_img{
+  display: inline-block;
+  width: 7%;
+  float: right;
+  margin-top: 3px;
+}
+.bot_msg_img {
+  display: inline-block;
+  width: 7%;
+  float: left;
+  margin-right: 4px;
+    margin-top: 4px;
+}
+.incoming_msg_img img, .bot_msg_img img{ max-width:100%;}
+/*.chat-message{
+    
+    
+}*/
+.msg-user{
+    float: right;
+    background: #d6d6d6;
+    border-radius: 10PX;
+    padding: 5PX;
+    width: 76%;
+    word-break: break-word;
+    margin: 2px;
+}
+.chat-reply{
+    background: #ffc88a;
+    width: 76%;
+    float: left;
+    border-radius: 10PX;
+    padding:5PX;
+    margin: 2px 1px 2px 0px;
+}
+.chat-popup .input-group-addon {
+    padding: unset;
+    font-size: unset;
+    line-height: unset;
+    color: unset;
+     text-align:unset; 
+     background-color:unset; 
+     border:unset; 
+     border-radius: unset; 
+}
+#bot-chat-top{
+    text-align: center;
+    padding: 10px;
+    background: #ffc88a;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+#bot-chat-top img{
+    width: 25%;
+    margin-bottom: 10px;
+}
+
+</style>
+</HEAD>
+<Body style="margin:0px">
+<img src="{% static 'images/ab.png' %}" alt="" class="img-fluid" width="100%" />
+ <button class="open-button" onclick="openForm()">Chat</button>
+
+    
+    <button class="open-button" onclick="openForm()" style="background-color: #FBA442;color: white;border: none;
+    cursor: pointer;  position: fixed;  bottom: 5px;right: 80px;  width: 70px;height: 70px;   border-radius: 70px;    z-index: 1;">Chat</button>
+    <div class="chat-popup form-container2" id="myForm">
+        <div class="row alert alert-success" style="padding-left: 0px; padding-right: 0px;color: #eaeaea;background-color: #FBA442; border-color: #FBA442;border-radius: 0px;margin: auto -10px 10px -10px;"> 
+            <div class="col-md-9 col">
+            	<div>
+                <img src="{% static 'images/logo1.png' %}"  id="head_image" alt="" class="img-fluid" width="42" height="42" style="border-radius: 50%" />
+            </div>
+            
+
+            </div>
+            <div class="col-md-3 col">
+                <i class="fas fa-times pull-right" onclick="closeForm()" style="color: #eaeaea;"></i>
+            </div>
+        </div>         
+        <form method = 'POST'> 
+        {% csrf_token %}          
+            <div id="chatbox">
+                <div id="chatroom">
+                    <div id="bot-chat-top"></div>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="chat-message-input" class="form-control" autocomplete="off" required>
+                <div class="input-group-addon">
+                    <button class="fas fa-arrow-circle-right" id="chat-message-submit"></button> 
+                </div>
+            </div>      
+              
+        </form>
+    </div>
+
+     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <!-- stats -->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countup.js' %}"></script>
+
+    <!-- owl carousel -->
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+
+    <!-- start-smooth-scrolling -->
+    <script src="{% static 'js/move-top.js' %}"></script>
+    <script src="{% static 'js/easing.js' %}"></script>
+
+    <!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
+    <!-- <script src="{% static 'js/jquery-1.7.2.js' %}"></script> -->
+    <script src="{% static 'js/jquery.quicksand.js' %}"></script>
+    <script src="{% static 'js/script.js"></script>
+    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+    <!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
+
+
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- video js file -->
+    <script src="{% static 'js/jquery.vide.min.js' %}"></script>
+    <!-- /video js file -->
+
+    <!-- custom js file -->
+    <script src="{% static 'js/universe.js' %}"></script>
+    <!-- /custom js file -->
+
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+  <script type="text/javascript">
+    
+    var welc ='Welcome! I am  your friendly assistant. Ask me your queries.'; 
+    $('#bot-chat-top').append('<img src="{% static "images/logo1.png" %}" alt="img"> <br>' + welc);
+    setInterval(function(){
+        $('#bot-chat-top').css('display','none');
+    },60000);       
+    </script>
+    <script>
+    var chatSocket = new WebSocket(
+        'ws://' + window.location.host);
+    chatSocket.onmessage = function(e) {
+        var data = JSON.parse(e.data);
+        var message = data['message'];
+        var reply = data['reply'];
+        var welc = data['welc_msg']
+        var x=1;
+        x++;
+        e.preventDefault();
+        
+        console.log(welc);
+        // var add = '<div class="d-block">'+message+'</div>';
+        // $('#chat-log1').append(add);
+        // var sub ='div class="d-block'+reply+'</div>';
+            // var x=location.hash;
+            var content = '<div class="chat-message">  <div class="msg-user">'+ message+'</div></div><div class="clearfix"></div><div class="bot_msg_img"> <img src="{% static "images/logo1.png" %}" alt="img"> </div> <div class="chat-reply">'+reply+'</div><div class="clearfix"></div><hr style="border-color:#fff; margin-top:10px; margin-bottom:10px;">';
+             
+            
+            $('#chatroom').append(content);
+            $('#chatbox').animate({ scrollTop: $('#chatbox').prop("scrollHeight")}, 1000);
+            
+            
+        // document.querySelector('#chat-log1').value += ("You:" + message + '\n');
+        // document.querySelector('#chat-log2').value += ("Bot:" + reply + '\n' );
+        
+    };
+    
+    chatSocket.onclose = function(e) {
+        console.error('Chat socket closed unexpectedly');
+    };
+    document.querySelector('#chat-message-input').focus();
+    document.querySelector('#chat-message-input').blur = function(e) {
+        if (e.keyCode === 13) {  // enter, return
+            document.querySelector('#chat-message-submit').click();
+        }
+    };
+    document.querySelector('#chat-message-input').keyup = function(e) {
+        if (e.keyCode === 13) {  // enter, return
+            document.querySelector('#chat-message-submit').click();
+        }
+    };
+    document.querySelector('#chat-message-submit').onclick = function(e) {
+        e.preventDefault();
+        messageInputDom = document.querySelector('#chat-message-input');
+        if(messageInputDom.value!='')
+        {
+            console.log(messageInputDom);
+        var message = messageInputDom.value;
+        console.log(message);
+        chatSocket.send(JSON.stringify({
+            'message': message
+        }));
+        messageInputDom.value = '';
+        var i=1;   
+        }
+        
+    };
+    </script>
+
+</Body>
+</HTML>

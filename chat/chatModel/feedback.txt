@@ -1,0 +1,37 @@
+
+how can i contact her
+@train
+what can you do for me?
+I can provide basic information about ashley
+hi
+@train
+what can you do for me?
+I can provide you the basic information about Ashley
+hi
+@train
+what can you do for me ?
+I can provide you basic information about Ashley..
+hi
+@train
+what is a radio
+radio is a device that can play music and your favourite program
+@train
+what is radio
+radio is a electronic device
+radio_def
+gh
+@train
+how is apple
+apple is red and round
+apple
+@begin_train
+how is the apple
+@train
+what is the weather today
+The weather today Clear with periodic clouds
+weather_info
+@train
+how is banana
+banana is yellow
+banana
+@begin_train
