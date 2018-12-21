@@ -1,10 +1,8 @@
 import json
-import os
 flag=0
 query=''
 response=''
 intent=''
-check_presence=0
 
 def check_train_mode(message):
     if message=='@train':
@@ -41,40 +39,20 @@ def enter_train_mode(message):
     else:
         flag=0
     return reply
+
 def write_csv():
     global query
     global response
     global intent
-    global check_presence
-    unmatched_content=list()
+    feeds={}
+    entry = {'intent': intent, 'query': [query], 'response': [response]}
     with open('./chat/chatModel/ab.json', mode='r',encoding='UTF-8') as feedsjson:
         feeds=json.load(feedsjson)
-        list_data=((feeds['intents']))
-       
-        for intents in list_data:
-            if intent==intents['intent']:
-                #print("yes")
-                intents['query'].append(query)
-                intents['reply'].append(response)
-                matched_content={'intents':feeds['intents']}
-                with open('./chat/chatModel/ab.json','w')as file:
-                    json.dump(matched_content,file)
-                    check_presence=1
-                break
+    #print((feeds['intents']))
+    feeds['intents'].append(entry)
+    #print(feeds['intents'])
+    with open('./chat/chatModel/ab.json', mode='w', encoding='UTF-8') as feedsjson:
+        feedsjson.write(json.dumps(feeds))
+    print("data added")
 
-            else:
-                unmatched_content.append(intents)
-                continue
-    if check_presence==0:
-        unmatched_content.append({'intent':intent,'query':[query],'response':[response]})
-        with open('./chat/chatModel/ab.json', 'w')as file:
-            json.dump({'intents':unmatched_content}, file)
-
-    else:
-        check_presence=0
-        print("ok then")
-    
     return 0
-
-
-

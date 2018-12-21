@@ -35,3 +35,62 @@ how is banana
 banana is yellow
 banana
 @begin_train
+how is weather today
+who is ashley
+what is she upto now
+hi
+who are you?
+who is ashley
+give me the contact information of ashley
+@train
+who made you?
+the nlp team
+bot_build
+@begin_train
+who made you
+hi
+hello
+whats up
+@train
+help me
+I will try to help you
+how is orange
+@train
+how is orange
+hi
+@train
+how is orange
+hi
+@TRAIN
+@
+@train
+how is orange
+its orange in color
+orange-color
+@begin_train
+@begin_train
+how is the orange
+how is orange
+hi
+hello
+hi
+how is the orange
+@train
+how is orange
+its orange in color
+orange-color
+@begin_train
+hi
+hello
+@begin_train
+hi
+hi
+@begin_train
+@train
+how is the orange
+it orange in color
+orange
+@begin_train
+how is the orange
+hi
+@begin_train
