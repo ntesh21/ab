@@ -1,7 +1,7 @@
 <HTML>
 {% load static %}
 <HEAD>
-	<title>AB</title>
+    <title>AB</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -50,6 +50,24 @@
      max-height: 270px;
      height: 270px;
     overflow-y: scroll;
+    padding-right:.4rem;
+}
+
+
+
+#chatbox::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+#chatbox::-webkit-scrollbar-thumb {
+  background: #FBA442; 
+  border-radius: 10px;
+}
+
+#chatbox::-webkit-scrollbar-thumb:hover {
+  background: #FBA442; 
+  cursor: pointer;
 }
 /* Full-width textarea */
 .form-container2 textarea {
@@ -78,19 +96,31 @@
     opacity: 0.8;
 }
 #chat-message-input { 
-    border: 1px solid #FBA442;
+    border: 0.5px solid #FBA442;
+    border-width: 1.46px 1.46px;
+    border-radius: 20px;
     background-color: #eaeaea;
     color: #151515;
+    margin-top: : 20px;
 }
 #chat-message-input:focus{
     background-color: #fff;
     border-color: #FBA442;
     outline: none;
 }
+
 #chat-message-submit{
-    color: #FBA442;
-    padding: 8px;
+    border:none;
+    background: transparent;
+    width:40px;
+    height: 40px;
+
 }
+#chat-message-submit img{
+    padding:0 .2rem;
+    cursor:pointer;
+}
+
 /* Add a red background color to the cancel button */
 .form-container2 .cancel {
     background-color: red;
@@ -168,7 +198,7 @@
     <div class="chat-popup form-container2" id="myForm">
         <div class="row alert alert-success" style="padding-left: 0px; padding-right: 0px;color: #eaeaea;background-color: #FBA442; border-color: #FBA442;border-radius: 0px;margin: auto -10px 10px -10px;"> 
             <div class="col-md-9 col">
-            	<div>
+                <div>
                 <img src="{% static 'images/logo1.png' %}"  id="head_image" alt="" class="img-fluid" width="42" height="42" style="border-radius: 50%" />
             </div>
             
@@ -185,10 +215,13 @@
                     <div id="bot-chat-top"></div>
                 </div>
             </div>
-            <div class="input-group">
+
+
+            <div class="input-group" style="margin-top: .8rem;">
                 <input type="text" id="chat-message-input" class="form-control" autocomplete="off" required>
                 <div class="input-group-addon">
-                    <button class="fas fa-arrow-circle-right" id="chat-message-submit"></button> 
+                    
+                    <button class="" id="chat-message-submit"><img src="{% static 'images/send-btn.svg'%}" class="img-fluid"></button> 
                 </div>
             </div>      
               
