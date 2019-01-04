@@ -11,7 +11,7 @@ import random
 
 # import our chat-bot intents file
 import json
-with open('./chat/chatModel/ab.json') as json_data:
+with open('ab.json') as json_data:
     intents = json.load(json_data)
 
 words = []
@@ -89,10 +89,10 @@ net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
 
 # Define model and setup tensorboard
-model = tflearn.DNN(net, tensorboard_dir='./chat/chatModel/tflearn_logs')
+model = tflearn.DNN(net, tensorboard_dir='./tflearn_logs')
 # Start training (apply gradient descent algorithm)
 model.fit(train_x, train_y, n_epoch=1000, batch_size=8, show_metric=True)
-model.save('./chat/chatModel/model2.tflearn')
+model.save('./model2.tflearn')
 
 def clean_up_sentence(sentence):
     # tokenize the pattern
@@ -125,4 +125,4 @@ print(model.predict([p]))
 
 # save all of our data structures
 import pickle
-pickle.dump( {'words':words, 'classes':classes, 'train_x':train_x, 'train_y':train_y}, open( "./chat/chatModel/training_data2", "wb" ) )
+pickle.dump( {'words':words, 'classes':classes, 'train_x':train_x, 'train_y':train_y}, open( "./training_data2", "wb" ) )

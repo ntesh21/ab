@@ -163,6 +163,7 @@
     border-radius: 10PX;
     padding:5PX;
     margin: 2px 1px 2px 0px;
+    word-break: break-all;
 }
 .chat-popup .input-group-addon {
     padding: unset;
@@ -184,6 +185,17 @@
 #bot-chat-top img{
     width: 25%;
     margin-bottom: 10px;
+}
+
+.tbutton {
+    border: solid 1px #0000005e;
+    border-radius: 50px;
+    padding: .3rem .5rem .2rem;
+    font-size: 0.9rem;
+}
+
+.tbutton:hover {
+     cursor: pointer;
 }
 
 </style>
@@ -214,17 +226,23 @@
                 <div id="chatroom">
                     <div id="bot-chat-top"></div>
                 </div>
+                  
             </div>
+            
 
-
+            <div id="tags" class="row pl-3">     
+                    
+            </div>
             <div class="input-group" style="margin-top: .8rem;">
-                <input type="text" id="chat-message-input" class="form-control" autocomplete="off" required>
+
+                <input type="text" id="chat-message-input" class="form-control"  value="" autocomplete="off" required>
                 <div class="input-group-addon">
                     
                     <button class="" id="chat-message-submit"><img src="{% static 'images/send-btn.svg'%}" class="img-fluid"></button> 
                 </div>
-            </div>      
-              
+
+            </div>
+                
         </form>
     </div>
 
@@ -267,6 +285,12 @@
         function closeForm() {
             document.getElementById("myForm").style.display = "none";
         }
+
+         function myTag(tag_name) {
+            
+            document.getElementById("chat-message-input").value = tag_name;
+            // alert("you clicked on tag");
+        }
     </script>
   <script type="text/javascript">
     
@@ -283,19 +307,43 @@
         var data = JSON.parse(e.data);
         var message = data['message'];
         var reply = data['reply'];
-        var welc = data['welc_msg']
+        var link = data['link'];
+        var tags = data['tags'];
+        var welc = data['welc_msg'];
         var x=1;
         x++;
         e.preventDefault();
         
-        console.log(welc);
+        console.log("Link:", link);
+        $('#tags').empty();
+        for (i=0; i<tags.length; i++)
+        {   
+            var tag_element = '<div class="mt-2 ml-1"> <a class="tbutton" onclick="myTag(\''+(tags[i])+'\')">'+tags[i]+'</a></div>';
+            $('#tags').append(tag_element);
+        }
+        console.log("Tag:", tags[0]);
+
+
+         function openLink(link) {
+        window.open(link);
+    }
+
+        if (link=='open'){
+            openLink(reply)
+        }
+
+
+       
         // var add = '<div class="d-block">'+message+'</div>';
         // $('#chat-log1').append(add);
         // var sub ='div class="d-block'+reply+'</div>';
             // var x=location.hash;
             var content = '<div class="chat-message">  <div class="msg-user">'+ message+'</div></div><div class="clearfix"></div><div class="bot_msg_img"> <img src="{% static "images/logo1.png" %}" alt="img"> </div> <div class="chat-reply">'+reply+'</div><div class="clearfix"></div><hr style="border-color:#fff; margin-top:10px; margin-bottom:10px;">';
+
+            // var tag = '<div class="tag-user">'+ tags +'</div>'
              
-            
+            // $('#tag-user').append(tag)
+
             $('#chatroom').append(content);
             $('#chatbox').animate({ scrollTop: $('#chatbox').prop("scrollHeight")}, 1000);
             
@@ -335,6 +383,8 @@
         }
         
     };
+
+   
     </script>
 
 </Body>

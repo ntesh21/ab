@@ -1,1 +1,300 @@
-{"intents": [{"intent": "bot_info", "query": ["how are you"], "response": ["Fit and fine"]}, {"intent": "about_ashley", "query": ["Who do You say Ashley berges is", "who is ashely", "who is ashley berges"], "response": ["Ashley Berges is a radio personality, Author, as well as an expert life coach."]}, {"intent": "benefits_of_ashley", "query": ["How can we be benifited by asheley berges?", "I want to know what benefits do i get from her", "benefits of asheley berges", "her benifits", "how can any one get benefited from her?", "tell me her benefits"], "response": ["Ashley berges helps us achieve our life goals by providing mentoring and motivating and let us see things in our life as it is. *Ashley creates a specific diet and exercise program for each client. *Program tailored specific to you client, with instant results *Maintain weight loss *Accountability partner"]}, {"intent": "bot_identity", "query": ["who am i talking to ", "who are you?"], "response": ["I am Ashley's Virtual Assistant. You can ask basic information about her to me"]}, {"intent": "celebrity_attended_her_show", "query": ["Who were some of her Celebrity Guests on Ashley berges show?", "celebrity information who visited her", "tell me some famous personality who visited in her show", "tell me the names of celebrity who visited her", "who are the celebrity visiting her show", "who visited her"], "response": ["Some of her celebrity guests were Johnny Knoxville (Jackass Films), Tony Denison (Major Crimes), Gary Busey, Arnold Schwarzenegger, Larry Hagman and cast of Dallas TV series, Governor of Texas Rick Perry, Harry Shearer (The Simpsons), Jake Busey (From Dusk Till Dawn TV Series) and Emmy Nominated actor Emrhys Cooper (Vanity)."]}, {"intent": "contact_info", "query": ["How can you contact her?", "give me her contact information", "give me her email i want to contact her", "give me the phone number of her", "i was trying to contact ashley berges, tell me how cani i do that", "i was wondering if you could give me the telephone number or email address of hers", "need her contact information", "please provide me the contact information of ashley lives", "tell me the contact information of ashley berges"], "response": ["We can contact her through following details  Phone:\u00a0(713) 518-4914 for media enquiry Email:<a href=\u00a0'perspectiveswab@gmail.com'>perspectiveswab@gmail.com </a>for personal messages <a href= \"http://www.ashleyberges.com/contact-us\">ashleyberges.com</a> if you want to hire her as a life coach."]}, {"intent": "current_project", "query": ["What is she coming up with ?", "tell me about the recent works she is working on", "what has she come up now", "what is her plan for coming days", "what project is currently in her upcoming list"], "response": ["She has come up with new  show called \u2018the celebrity prespective\u2019."]}, {"intent": "famous_blog", "query": ["What are some of her famous blog", "could you let me know about her blogs", "give me the information about her blogs", "tell me about her famous blogs"], "response": ["Some of her famous blogs are : Make the a most of your life, what would God do?, Overwhelmed by news media, turn down the outside noise in order to hear inner truth, letting go to growth, 12 tips for happier life etc."]}, {"intent": "farewell", "query": ["goodbye"], "response": ["Goodbye, it was nice meeting you"]}, {"intent": "get_updated_about_her", "query": ["How can i get regular update from her side?", "How can you be updated regularly from Ashley berges?", "get regular update from ashley", "give me her website address", "how can i know more about her", "i want to get updated about her life how can i do that"], "response": ["You can be updated from Ashley berges by subscribing to her news letter through her website <a href='www.ashleyberges.com'>ashleyberges.com</a>"]}, {"intent": "greeting", "query": ["Hi", "hello", "hola"], "response": ["Hi, how may i help you ?", "Hello, how can I help you?"]}, {"intent": "help_other", "query": ["How does she help?", "What does she help her audience to achieve?"], "response": ["She helps her audience get free from self negative talk that discourages them and get from self loathing to self loving."]}, {"intent": "her_book", "query": ["What are some of the book written by her?", "about her book", "books her", "can i get information about her books", "do you know about her books", "her books", "how about you tell me about her books", "tell me about her books"], "response": ["Some of her books are \u201cLive your True Life\u201d, \u201cThe 10 Day challenge to live your true life\u201d."]}, {"intent": "her_compliment", "query": ["she seems like a interesting person"], "response": ["yeah she is :)"]}, {"intent": "her_moto", "query": ["What is her main mooto?"], "response": ["Her main motto is we are all born pure souls that can begin from hurting themselves to healing themselves in difficult times. "]}, {"intent": "her_motto", "query": ["her motto", "tell me her motto", "tell me her philosophy", "what is her main motto", "what is her motto in life?", "why is the reason behind these ?"], "response": ["Her main motto is we are all born pure souls that can begin from hurting themselves to healing themselves in difficult times. "]}, {"intent": "her_offer", "query": ["What services does she offer?", "do you know what service she offer to her clients?", "her offers??", "offers that she provide", "tell me about her service"], "response": ["She offers public motivation speaker, pathfinding Coaching and therapy, weight loss coaching, business and corporate coaching and PR and influencer coaching."]}, {"intent": "home_address", "query": ["Give me her location", "Give me the address of ashely Berges", "Where does Ashley Lives?", "her address please", "tell me the address of ashley"], "response": ["Ashley lives n Dallas, texas."]}, {"intent": "medium_to_listen_her_show", "query": ["How can we hear the new show?", "how can i access her new show", "i wanna listen to her new show , can i listen through i tunes", "i want to hear her new show, how can i do that", "listen her new show how?"], "response": ["The new show can be heard across the multiple platforms like Itunes, Spreaker, radio monterey, google play, Stitcher, KLIF 570am news station , as well as in her own iHeart Radio station.", "he new show can be heard across the multiple platforms like Itunes, Spreaker, radio monterey, google play, Stitcher, KLIF 570am news station , as well as in her own iHeart Radio station."]}, {"intent": "new_station_name", "query": ["I want the name of her new station ", "What is her new station name?", "could you just tell me the name of her new station name", "her new station name?", "i was wondering if you could tell me the name of her new station", "name of her new station", "what is the name of her new station?"], "response": ["Here you go , iHeartRadio Station.", "Her new station is iHeartRadio Station."]}, {"intent": "reason_behind_her_motivation", "query": ["What motivated her to be an public speaker and coach to find a happy Life? ", "source of her motivation", "what is the reason behind her motivation?"], "response": ["The main motivation was she was born with debilitating condition that was untreated until her mid 20\u2019s she \u00a0judged herself because of her disease.  She goes on to say, \u201cOver time, we begin to focus on our flaws and we falter. It took me a long time to come full circle to love me for me. That\u2019s when she began to \u2018Live My True Life\u2019 and realize her  journey is to share it with the world and help others heal too."]}, {"intent": "secondary_job", "query": ["What else does she help rather than life coaching?", "tell me about her secondary jobs", "what else she does besides these things"], "response": ["She helps us provide weightloss training, stop smoking coaching, marketing, as well as motivational speaking and motivational coaching workshops."]}, {"intent": "show_name", "query": ["I want to know the name of her show", "What is her show name?", "give me the information about her show name", "her show name", "last show", "last show information", "show name", "tell me about her show", "what are her show name", "what is the name of her show?"], "response": ["The syndicates sow name is prespective however she launches various season. The name of her last show was \u201clive your true life Perspectives\u201d."]}, {"intent": "show_released_date", "query": ["When was It started?", "her last show released data", "release date of her show", "when was her last show started", "when was her show started?"], "response": ["It was started in 2012.", "the show was started in 2012"]}, {"intent": "show_time", "query": ["When can we hear Ashley berges?", "i want to know the time of your show maam ", "show time?", "what is the time for her show?", "what is the time for your show?"], "response": ["You can hear Ashley berges in Thursday 6:00pm across multiple platforms like Itunes like Itunes, Spreaker, radio monterey, google play, Stitcher, KLIF 570am news station , as well as in her own iHeart Radio station."]}, {"intent": "source of her motivation", "query": ["tell me the source of her motivation"], "response": ["The main motivation was she was born with debilitating condition that was untreated until her mid 20\u2019s she \u00a0judged herself because of her disease.  She goes on to say, \u201cOver time, we begin to focus on our flaws and we falter. It took me a long time to come full circle to love me for me. That\u2019s when she began to \u2018Live My True Life\u2019 and realize her  journey is to share it with the world and help others heal too."]}, {"intent": "source_of_motivation", "query": ["tell me her source of motivation"], "response": ["The main motivation was she was born with debilitating condition that was untreated until her mid 20\u2019s she \u00a0judged herself because of her disease.  She goes on to say, \u201cOver time, we begin to focus on our flaws and we falter. It took me a long time to come full circle to love me for me. That\u2019s when she began to \u2018Live My True Life\u2019 and realize her  journey is to share it with the world and help others heal too."]}, {"intent": "thank", "query": ["Thankyou", "thank you"], "response": ["you are welcome :)"]}, {"intent": "understan_client", "query": ["How does Ashley understand her clients?"], "response": ["Ashley from the first meeting begins by understanding what the client need, their frustration, wants desires and life goals and their emotion. "]}, {"intent": "understand_client", "query": ["how does she understand her client", "tell me man how does she know her client", "understand client how?"], "response": ["Ashley from the first meeting begins by understanding what the client need, their frustration, wants desires and life goals and their emotion. "]}, {"intent": "radio_def", "query": ["what is radio"], "response": ["radio is a electronic device"]}, {"intent": "apple", "query": ["how is apple"], "response": ["apple is red and round"]}, {"intent": "weather_info", "query": ["what is the weather today"], "response": ["The weather today Clear with periodic clouds"]}, {"intent": "banana", "query": ["how is banana"], "response": ["banana is yellow"]}, {"intent": "bot_build", "query": ["who made you?"], "response": ["the nlp team"]}, {"intent": "orange", "query": ["how is the orange"], "response": ["it orange in color"]}]}
+{"intents": 
+	[
+		{
+			"intent": "bot_info", 
+			"query": ["how are you"], 
+			"response": ["I am very much Fit and fine"],
+			"link": "close"
+		},
+
+		{
+ 			"context_set": "ashley_context",
+ 			"intent": "berges_context", 
+ 			"query": ["about her","her", "tell me about her", "i want to know about her" ], 
+ 			"response": ["Do you want to know about Ashley Berges"],
+ 			"link": "close"
+ 		},
+
+ 		
+ 		{
+ 			"intent": "about_ashley", 
+ 			"query": ["Who do You say Ashley berges is", "who is ashley", "who is ashley berges"], 
+ 			"response": ["Ashley Berges is a radio personality, Author, as well as an expert life coach."],
+ 			"link": "close"
+ 		},
+
+ 		{
+ 			"context_filter": "ashley_context",
+ 			"intent": "about_her", 
+ 			"query": ["yes", "who is she"], 
+ 			"response": ["Ashley Berges is a radio personality, Author, as well as an expert life coach."],
+ 			"link": "close"
+ 		}, 
+ 
+
+ 		{
+ 			"intent": "benefits_of_ashley", 
+ 			"query": ["How can we be benifited by asheley berges?", "I want to know what benefits do i get from her", "benefits of asheley berges", "her benifits", "how can any one get benefited from her?", "tell me her benefits", "Perks", "Benifits", " What will I Achieve with Ashley"], 
+ 			"response": ["Ashley berges helps us achieve our life goals by providing mentoring and motivating and let us see things in our life as it is. *Ashley creates a specific diet and exercise program for each client. *Program tailored specific to you client, with instant results *Maintain weight loss *Accountability partner"],
+ 			"link": "close"
+
+ 		},
+
+ 		{
+ 			
+ 			"intent": "bot_identity", 
+ 			"query": ["who am i talking to ", "who are you?", "Do I know you", "who is this", "Are you Ashley"], 
+ 			"response": ["I am Ashley's Virtual Assistant. You can ask basic information about her to me"],
+ 			"link": "close"
+
+ 		}, 
+
+ 		{	
+ 			"intent": "celebrity_attended_her_show", 
+ 			"query": ["Who were some of her Celebrity Guests on Ashley berges show?", "celebrity information who visited her", "tell me some famous personality who visited in her show", "tell me the names of celebrity who visited her", "who are the celebrity visiting her show", "who visited her", "Her Clients", "Her Attendees", "Her Guests on her shows"], 
+ 			"response": ["Some of her celebrity guests were Johnny Knoxville (Jackass Films), Tony Denison (Major Crimes), Gary Busey, Arnold Schwarzenegger, Larry Hagman and cast of Dallas TV series, Governor of Texas Rick Perry, Harry Shearer (The Simpsons), Jake Busey (From Dusk Till Dawn TV Series) and Emmy Nominated actor Emrhys Cooper (Vanity)."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"context_set": "contact_choice",
+ 			"intent": "contact_info", 
+ 			"query": ["How can you contact her?", "give me her contact information", "i was trying to contact ashley berges, tell me how can i contact ", "i was wondering if you could give me the telephone number or email address of hers", "need her contact information", "please provide me the contact information of ashley lives", "tell me the contact information of ashley berges", "Contact her", "Her contact", "Need to contact her"], 
+ 			"response": ["Want to visit her contact page or do you just want details about her 'Phone' or 'Email' or 'Website'! "],
+ 			"link": "close"
+ 		},
+
+ 		{
+ 			"context_filter": "contact_choice",
+ 			"intent": "specific_info", 
+ 			"query": ["just details", "just specific", "just phone number", "just email", "just website", "website", "phone", "email"], 
+ 			"response": ["We can contact her through following details  Phone:\u00a0(713) 518-4914.  Email:<a href=\u00a0'perspectiveswab@gmail.com'>perspectiveswab@gmail.com.</a> We can contact her through  <a href= \"http://www.ashleyberges.com/contact-us\">ashleyberges.com"],
+ 			"link": "close"
+ 		},
+
+
+
+ 		{
+ 			"intent": "current_project", 
+ 			"query": ["What is she coming up with ?","tell me about the recent works she is working on","what has she come up now", "what is her plan for coming days", "what project is currently in her upcoming list", "Her Projects", "Her Ventures", "Her Works"], 
+ 			"response": ["She has come up with new  show called \u2018the celebrity prespective\u2019."],
+ 			"link": "close"
+ 		},
+
+
+ 		{
+ 			"context_set": "blog_choice",
+ 			"intent": "choose_blog", 
+ 			"query": ["What are some of her famous blog", "could you let me know about her blogs", "give me the information about her blogs", "tell me about her famous blogs", "Blogs", "Recent Blogs", "Famous Blogs"], 
+ 			"response": ["Do you want to visit blogs page for more details or just know basics"],
+ 			"link": "close"
+ 		}, 
+ 		
+ 		{
+ 			"context_filter": "blog_choice",
+ 			"intent": "famous_blog", 
+ 			"query": ["just know the basics", "just give me the details", "just basics", "basics"], 
+ 			"response": ["Some of her famous blogs are : Make the a most of your life, what would God do?, Overwhelmed by news media, turn down the outside noise in order to hear inner truth, letting go to growth, 12 tips for happier life etc."],
+ 			"link": "close"
+ 		},
+
+ 		{
+ 			"intent": "farewell", 
+ 			"query": ["goodbye"], 
+ 			"response": ["Goodbye, it was nice meeting you"],
+ 			"link": "close"
+ 		}, 
+
+ 		{	
+ 			"intent": "get_updated_about_her", 
+ 			"query": ["How can i get regular update from her side?","How can you be updated regularly from Ashley berges?", "get regular update from ashley", "give me her website address", "how can i know more about her", "i want to get updated about her life how can i do that", "Suscribe", "Be Updated", "Newsletter"], 
+ 			"response": ["You can be updated from Ashley berges by subscribing to her news letter through her website <a href='www.ashleyberges.com'>ashleyberges.com</a>"],
+ 			"link": "close"
+ 		}, 
+ 		
+ 		{
+ 			"intent": "greeting", 
+ 			"query": ["Hi", "hello", "hola"], 
+ 			"response": ["Hi, how may i help you ?", "Hello, how can I help you?"],
+ 			"link": "close"
+ 			
+
+ 		}, 
+
+ 		{
+ 			"intent": "help_other", 
+ 			"query": ["How does she help?", "What does she help her audience to achieve?", "Help to her Audiences", "Help she provides","Her Services"], 
+ 			"response": ["She helps her audience get free from self negative talk that discourages them and get from self loathing to self loving."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "her_book", 
+ 			"query": ["What are some of the book written by her?", "about her book", "books her", "can i get information about her books", "do you know about her books", "her books", "how about you tell me about her books", "tell me about her books"], 
+ 			"response": ["Some of her books are \u201cLive your True Life\u201d, \u201cThe 10 Day challenge to live your true life\u201d."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "her_compliment", 
+ 			"query": ["she seems like a interesting person", "i feel she is quite good", "is she good", "Interesting", "Good", "Amazing"], 
+ 			"response": ["She is very strong personality:)"],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "her_moto", 
+ 			"query": ["What is her main moto?", "her main agenda", "her priority"], 
+ 			"response": ["Her main motto is we are all born pure souls that can begin from hurting themselves to healing themselves in difficult times. "],
+ 			"link": "close"
+ 		}, 
+
+ 		{	
+ 			"intent": "her_motto", 
+ 			"query": ["her motto", "tell me her motto", "tell me her philosophy", "what is her main motto", "what is her motto in life?", "why is the reason behind these ?"], 
+ 			"response": ["Her main motto is we are all born pure souls that can begin from hurting themselves to healing themselves in difficult times. "],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "her_offer", 
+ 			"query": ["What services does she offer?", "do you know what service she offer to her clients?", "her offers??", "offers that she provide", "tell me about her service"], 
+ 			"response": ["She offers public motivation speaker, pathfinding Coaching and therapy, weight loss coaching, business and corporate coaching and PR and influencer coaching."],
+ 			"link": "close"
+
+ 		}, 
+ 		{
+ 			"intent": "home_address", 
+ 			"query": ["Give me her location", "Give me the address of ashely Berges", "Where does Ashley Lives?", "her address please", "tell me the address of ashley"], 
+ 			"response": ["Ashley lives n Dallas, texas."],
+ 			"link": "close"
+
+ 		}, 
+ 		{
+ 			"intent": "medium_to_listen_her_show", 
+ 			"query": ["How can we hear the new show?", "how can i access her new show", "i wanna listen to her new show , can i listen through i tunes", "i want to hear her new show, how can i do that", "listen her new show how?"], 
+ 			"response": ["The new show can be heard across the multiple platforms like Itunes, Spreaker, radio monterey, google play, Stitcher, KLIF 570am news station , as well as in her own iHeart Radio station.", "he new show can be heard across the multiple platforms like Itunes, Spreaker, radio monterey, google play, Stitcher, KLIF 570am news station , as well as in her own iHeart Radio station."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "new_station_name", 
+ 			"query": ["I want the name of her new station ", "What is her new station name?", "could you just tell me the name of her new station name", "her new station name?", "i was wondering if you could tell me the name of her new station", "name of her new station", "what is the name of her new station?"], 
+ 			"response": ["Here you go , iHeartRadio Station.", "Her new station is iHeartRadio Station."],
+ 			"link": "close"
+ 		}, 
+ 		
+ 		{
+ 			"intent": "reason_behind_her_motivation", 
+ 			"query": ["What motivated her to be an public speaker and coach to find a happy Life? ", "source of her motivation", "what is the reason behind her motivation?"], 
+ 			"response": ["The main motivation was she was born with debilitating condition that was untreated until her mid 20\u2019s she \u00a0judged herself because of her disease.  She goes on to say, \u201cOver time, we begin to focus on our flaws and we falter. It took me a long time to come full circle to love me for me. That\u2019s when she began to \u2018Live My True Life\u2019 and realize her  journey is to share it with the world and help others heal too."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "secondary_job", 
+ 			"query": ["What else does she help rather than life coaching?","tell me about her secondary jobs", "what else she does besides these things"], 
+ 			"response": ["She helps us provide weightloss training, stop smoking coaching, marketing, as well as motivational speaking and motivational coaching workshops."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "show_name", 
+ 			"query": ["I want to know the name of her show", "What is her show name?", "give me the information about her show name", "her show name", "last show", "last show information", "show name", "tell me about her show", "what are her show name", "what is the name of her show?"], 
+ 			"response": ["The syndicates sow name is prespective however she launches various season. The name of her last show was \u201clive your true life Perspectives\u201d."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "show_released_date", 
+ 			"query": ["When was It started?", "her last show released data", "release date of her show", "when was her last show started", "when was her show started?"], 
+ 			"response": ["It was started in 2012.", "the show was started in 2012"],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "show_time", 
+ 			"query": ["When can we hear Ashley berges?", "i want to know the time of your show maam ", "show time?", "what is the time for her show?", "what is the time for your show?"], 
+ 			"response": ["You can hear Ashley berges in Thursday 6:00pm across multiple platforms like Itunes like Itunes, Spreaker, radio monterey, google play, Stitcher, KLIF 570am news station , as well as in her own iHeart Radio station."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "source of her motivation", 
+ 			"query": ["tell me the source of her motivation"], 
+ 			"response": ["The main motivation was she was born with debilitating condition that was untreated until her mid 20\u2019s she \u00a0judged herself because of her disease.  She goes on to say, \u201cOver time, we begin to focus on our flaws and we falter. It took me a long time to come full circle to love me for me. That\u2019s when she began to \u2018Live My True Life\u2019 and realize her  journey is to share it with the world and help others heal too."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "source_of_motivation", 
+ 			"query": ["tell me her source of motivation"], 
+ 			"response": ["The main motivation was she was born with debilitating condition that was untreated until her mid 20\u2019s she \u00a0judged herself because of her disease.  She goes on to say, \u201cOver time, we begin to focus on our flaws and we falter. It took me a long time to come full circle to love me for me. That\u2019s when she began to \u2018Live My True Life\u2019 and realize her  journey is to share it with the world and help others heal too."],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "thank", 
+ 			"query": ["Thankyou", "thank you"], 
+ 			"response": ["You are welcome :)"],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "understand_client", 
+ 			"query": ["How does Ashley understand her clients?"], 
+ 			"response": ["Ashley from the first meeting begins by understanding what the client need, their frustration, wants desires and life goals and their emotion. "],
+ 			"link": "close"
+ 		}, 
+
+ 		{
+ 			"intent": "understand_client", 
+ 			"query": ["how does she understand her client", "tell me man how does she know her client", "understand client how?"], 
+ 			"response": ["Ashley from the first meeting begins by understanding what the client need, their frustration, wants desires and life goals and their emotion. "],
+ 			"link": "close"
+ 		},
+
+ 		{
+ 			"intent": "open_link", 
+ 			"query": ["open link, open this link", "please open this link"], 
+ 			"response": ["https://www.w3schools.com"],
+ 			"link": "open" 
+ 		},
+
+
+ 		{
+ 			"intent": "radio_link", 
+ 			"query": ["open link about radio, redirect me to radio page", "go to radio page"], 
+ 			"response": ["http://www.ashleyberges.com/radio-show/"],
+ 			"link": "open" 
+ 		},
+
+
+ 		{
+ 			"intent": "press_link", 
+ 			"query": ["open link about press, redirect me to press page", "go to press page"], 
+ 			"response": ["http://www.ashleyberges.com/press/"],
+ 			"link": "open" 
+ 		},
+
+
+ 		{
+ 			"context_filter": "blog_choice",
+ 			"intent": "blog_link", 
+ 			"query": ["open blog page, redirect me to blog page", "go to blog page", "give me blog page", "take me to her blog page", "open ashleys blog page", "go to ashley blog page", "visit blog page"], 
+ 			"response": ["http://www.ashleyberges.com/ashleys-blog/"],
+ 			"link": "open" 
+ 		},
+
+ 		{
+ 			"context_filter": "contact_choice",
+ 			"intent": "contact_link", 
+ 			"query": ["go to contact page","open contact page, redirect me to contact page", "go to contact page", "give me contact page", "take me to her contact page", "i want to her contact page", "i want to visit ashleys contact page", "go to her contact page", "visit contact page"], 
+ 			"response": ["http://www.ashleyberges.com/contact-us/"],
+ 			"link": "open" 
+ 		}
+
+
+
+ 	]
+}

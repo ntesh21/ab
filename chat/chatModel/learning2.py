@@ -11,6 +11,9 @@ import random
 # restore all of our data structures
 import pickle
 
+from chat.chatModel.graph import generate_possible_query
+import sqlite3
+from sqlite3 import Error
 
 
 data = pickle.load( open( "chat/chatModel/training_data2", "rb" ) )
@@ -69,6 +72,9 @@ model.load('chat/chatModel/model2.tflearn')
 
 ERROR_THRESHOLD = 0.20
 
+context = {}
+
+
 def classify(sentence):
     # generate probabilities from the model
     results = model.predict([bow(sentence, words)])[0]
@@ -85,26 +91,63 @@ def classify(sentence):
     return return_list
 
 welcome_msg = "Welcome to Trip TnT. I am  your assistant TnT bot at your service. Ask me your queries "
+def generate_p_query(tags):
+
+    possible_query=generate_tags(tags)
+    return possible_query
+
+
 
 
 
 def response(sentence, userID='123', show_details=False):
-    
+   
     results = classify(sentence)
+    possible_query=generate_possible_query(results[0][0])
+    # possible_query = ["ok"]
     # if we have a classification then find the matching intent tag
     if results:
-        if results[0][1]>0.70:
+        if results[0][1]>0.60:
             # loop as long as there are matches to process
             while results:
                 for i in intents['intents']:
                     # find a tag matching the first result
                     if i['intent'] == results[0][0]:
-                        reply = i['response']
-                        answer = reply[0]
-                        return answer
+                    # set context for this intent if necessary
+                        if 'context_set' in i:
+                            if show_details: print ('context:', i['context_set'])
+                            context[userID] = i['context_set']
+
+                        # check if this intent is contextual and applies to this user's conversation
+                        if not 'context_filter' in i or \
+                            (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
+                            if show_details: print ('intent:', i['intent'])
+                            reply = i['response']
+                            answer = reply[0]
+                            # link = i['link']
+                            return answer, possible_query
+                        else:
+                            return "Sorry I do not understand you!"
             results.pop(0)
         else:
-            return "Sorry I do not understand."
+            return "Sorry I do not understand you!"
+
+
+def open_link(sentence):
+    results = classify(sentence)
+    for i in intents['intents']:
+        if i['intent'] == results[0][0]:
+            link = i['link']
+            return link
+
+def open_tag(sentence):
+    results = classify(sentence)
+    for i in intents['intents']:
+        if i['intent'] == results[0][0]:
+            tags = i['tags']
+            return tags
+
+
 
 def pos_feedback():
     a = "Thank you for your feedback"

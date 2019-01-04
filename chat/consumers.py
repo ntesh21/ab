@@ -41,7 +41,13 @@ class ChatConsumer(WebsocketConsumer):
             reply=rep[0]
 
         elif train_switch==False and lock==0:
-            reply = str(learning2.response(message))
+            reply, possible_query = learning2.response(message)
+
+            link = learning2.open_link(message)
+
+            tags = possible_query
+
+            # tagss = response.tags
             
             #print(reply)
 
@@ -59,6 +65,8 @@ class ChatConsumer(WebsocketConsumer):
         self.send(text_data=json.dumps({
             'message': message,
             'reply':reply,
+            'link': link,
+            'tags':tags,
             'positive':learning2.pos_feedback(),
             'negetive' : learning2.neg_feedback(message),
             # 'feedback':feedback,
