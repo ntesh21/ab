@@ -310,9 +310,14 @@
         var link = data['link'];
         var tags = data['tags'];
         var welc = data['welc_msg'];
+        var pos_feedback = data['pos_feedback'];
+        var value = data['value'];
+        var neg_feedback = data['neg_feedback'];
         var x=1;
         x++;
         e.preventDefault();
+
+        // console.log("Feedback",neg_feedback);
         
         console.log("Link:", link);
         $('#tags').empty();
@@ -322,6 +327,10 @@
             $('#tags').append(tag_element);
         }
         console.log("Tag:", tags[0]);
+
+        //  $('#f_back').empty();
+        // var f_element = '<div class="mt-2 ml-1"><button onclick="posFeedback">Positive</button><button onclick="negfeedback">Negetive</button></div>';
+        //     $('#f_back').append(f_element);
 
 
          function openLink(link) {
@@ -333,6 +342,13 @@
         }
 
 
+    function posFeedback(){
+        return pos_feedback;
+    }
+
+    function negfeedback(){
+        return neg_feedback;
+    }
        
         // var add = '<div class="d-block">'+message+'</div>';
         // $('#chat-log1').append(add);

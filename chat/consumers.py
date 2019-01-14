@@ -12,6 +12,15 @@ import subprocess
 
 from subprocess import Popen
 import os
+
+from gtts import gTTS
+            # 0import os
+
+#for email
+import smtplib, ssl
+import re
+
+
 lock=0
 
 class ChatConsumer(WebsocketConsumer):
@@ -25,7 +34,7 @@ class ChatConsumer(WebsocketConsumer):
         global lock
         text_data_json = json.loads(text_data)
         message = text_data_json['message']
-        # pos_feedback = learning2.pos_feedback()
+        # feedback = learning2.feedback(message)
         # neg_feedback = learning2.neg_feedback(message)
         # print(neg_feedback)
 
@@ -41,11 +50,104 @@ class ChatConsumer(WebsocketConsumer):
             reply=rep[0]
 
         elif train_switch==False and lock==0:
-            reply, possible_query = learning2.response(message)
+            reply = learning2.response(message)
+            possible_query = learning2.poss_query(message)
+            result = learning2.email_intent(message)
+            print(result[0])
+
+        
+               
+            # tts = gTTS(text=reply, lang='en')
+            # tts.save("reply.mp3")
+            # # os.system("good.mp3")
+            # os.system("mpg321 reply.mp3 -quiet")
 
             link = learning2.open_link(message)
 
+
+
+            
+
+            port = 465  # For SSL
+            smtp_server = "smtp.gmail.com"
+            sender_email = "nitesh.ghimire@gmail.com"  # Enter your address
+            password = "mithrandir"
+
+
+            if result[0]=="email_user":
+                line = message
+                match = re.search(r'[\w\.-]+@[\w\.-]+', line)
+                # print(match)
+                try:
+                    email = match.group(0)
+                    print(email)
+                    receiver_email = email  # Enter receiver address
+                    mess = """\
+                    Ashley's Info
+
+                    Please visit http://www.ashleyberges.com/contact-us/ to sbscribe"""
+                   
+                    context = ssl.create_default_context()
+                    with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+                        server.login(sender_email, password)
+                        server.sendmail(sender_email, receiver_email, mess)
+                except:
+                    reply = "Please give your correct email adress."
+                    print("Email not in the line")
+
+
+
+
+            # receiver_email = email  # Enter receiver address
+            # mess = """\
+            #     Subject: Hi there
+
+            #     This message is sent from Python."""
+
+            # context = ssl.create_default_context()
+            # with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            #     server.login(sender_email, password)
+            #     server.sendmail(sender_email, receiver_email, message)
+
+            
             tags = possible_query
+
+            value=""
+            pos_value ="Positive"
+            neg_value ="Negetive"
+
+            # pf = open('chat/chatModel/feedback.txt', 'a')
+            # if value==pos_value:
+            #     feedback = pf.write("\n\n" + "Query:" + message + "\n" + "Reply:" + reply + "\n" + "Feedback:" + pos_value)
+            # elif value==neg_value:
+            #     feedback = pf.write("\n\n" + "Query:" + message + "\n" + "Reply:" + reply + "\n" + "Feedback:" + neg_value)
+            # else:
+            #     feedback = pf.write("\n\n" + "Query:" + message + "\n" + "Reply:" + reply + "\n" + "Feedback:" + None)
+
+
+
+                
+            
+
+
+
+    
+
+
+
+
+
+            # value = ""
+
+            # if value=="positive":
+            #     feedback = learning2.pos_feedback(message)
+            # elif value=="negetive":
+            #     feedback = learning2.neg_feedback(message)
+            # else:
+            #     pass
+
+            # print("pF",pos_feedback)
+            # print("nF",neg_feedback)
 
             # tagss = response.tags
             
@@ -67,8 +169,9 @@ class ChatConsumer(WebsocketConsumer):
             'reply':reply,
             'link': link,
             'tags':tags,
-            'positive':learning2.pos_feedback(),
-            'negetive' : learning2.neg_feedback(message),
+            'value':value,
+            # 'feedback':feedback,
+            # 'neg_feedback':neg_feedback
             # 'feedback':feedback,
         }))
 

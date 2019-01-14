@@ -289,10 +289,27 @@
  		{
  			"context_filter": "contact_choice",
  			"intent": "contact_link", 
- 			"query": ["go to contact page","open contact page, redirect me to contact page", "go to contact page", "give me contact page", "take me to her contact page", "i want to her contact page", "i want to visit ashleys contact page", "go to her contact page", "visit contact page"], 
+ 			"query": ["go to contact page","open contact page", "redirect me to contact page", "go to contact page", "give me contact page", "take me to her contact page", "i want to her contact page", "i want to visit ashleys contact page", "go to her contact page", "visit contact page"], 
  			"response": ["http://www.ashleyberges.com/contact-us/"],
  			"link": "open" 
+ 		},
+
+ 		{
+ 			"context_set": "send_email",
+ 			"intent": "inquiry_newsletter", 
+ 			"query": ["subscribe her newsletter","subscribe newsletter", "Subscribe newsletter", "newsletter", "inquiry", "i want to subscribe", "subscribe", "Subscribe", "further inquiry"], 
+ 			"response": ["Please provide your Email Address"],
+ 			"link": "close" 
+ 		},
+
+ 		{
+ 			"context_filter": "send_email",
+ 			"intent": "email_user", 
+ 			"query": [".com", "gmail.com", "outlook.com"], 
+ 			"response": ["Email has been snt to your adress. Please check your email."],
+ 			"link": "close" 
  		}
+
 
 
 

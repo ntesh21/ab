@@ -103,7 +103,7 @@ def generate_p_query(tags):
 def response(sentence, userID='123', show_details=False):
    
     results = classify(sentence)
-    possible_query=generate_possible_query(results[0][0])
+    # possible_query=generate_possible_query(results[0][0])
     # possible_query = ["ok"]
     # if we have a classification then find the matching intent tag
     if results:
@@ -125,12 +125,18 @@ def response(sentence, userID='123', show_details=False):
                             reply = i['response']
                             answer = reply[0]
                             # link = i['link']
-                            return answer, possible_query
+                            return answer
                         else:
                             return "Sorry I do not understand you!"
             results.pop(0)
         else:
             return "Sorry I do not understand you!"
+
+def poss_query(sentence):
+    results = classify(sentence)
+    possible_query=generate_possible_query(results[0][0])
+    return possible_query
+
 
 
 def open_link(sentence):
@@ -146,17 +152,24 @@ def open_tag(sentence):
         if i['intent'] == results[0][0]:
             tags = i['tags']
             return tags
+def email_intent(sentence):
+     results = classify(sentence)
+     return results[0]
 
 
 
-def pos_feedback():
-    a = "Thank you for your feedback"
-    return a
 
-def neg_feedback(sentence, show_details=False):
-    with open('chat/chatModel/feedback.txt', 'a') as fb:
-        fb.write("\n" + sentence)
-    a = "Thank you for your feedback."
-    return a
+# def feedback(sentence, show_details=False):
+#     with open('chat/chatModel/feedback.txt', 'a') as fb:
+#         fb.write("\n" + sentence)
+#     a = "Feedback"
+#     return a
+
+
+# def neg_feedback(sentence, show_details=False):
+#     with open('chat/chatModel/neg_feedback.txt', 'a') as fb:
+#         fb.write("\n" + sentence)
+#     a = "Negetive"
+#     return a
 
 
